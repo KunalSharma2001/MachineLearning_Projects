@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <title>House Website</title>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="content">
+        <h1 class="heading" align="center">House Price Prediction Website</h1>
+        <h3 class="sub-heading" align="center">Using Machine Learning</h3>
+        <div class="form-container">
+            <form action="/predict" method="post">
+                <h2 class="form-heading">Location of House</h2>
+                <input type="text" name="Number of Rooms" placeholder="enter rooms">
+                
+                <br>
+
+                <h2 class="form-heading">BHK</h2>
+                <input type="text" name="bhk" placeholder="ENTER BHK" id="bhk" >
+
+                <h2 class="form-heading">No. of Bathrooms</h2>
+                <input type="text" name="bathroom" placeholder="Number of bathrooms">
+
+                <h2 class="form-heading">Total Sq.ft</h2>
+                <input type="text" name="sq.ft area" placeholder="TotEnter Sq.ft Area">
+
+                <br>
+                <br>
+                <br><br><br><br>
+                <button type="submit" onclick="send_data()">Submit</button>
+            </form>
+        </div>
+        <h2 class="op">{{pred}}</h2>
+    </div>
+</body>
+</html>

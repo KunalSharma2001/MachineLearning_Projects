@@ -1,0 +1,102 @@
+body {
+    position: relative; /* Required for positioning pseudo-element */
+    background-image: url("1318416.png");
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.251); /* Black color with 50% opacity */
+    pointer-events: none; /* Allows clicking through the transparent rectangle */
+}
+
+.heading{
+    content: "";
+    left: 500px;
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    margin-top: 8%;
+    filter: drop-shadow(5px 5px 10px rgba(78, 78, 78, 0.8));
+}
+.sub-heading{
+    padding-top: inherit;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    filter: drop-shadow(5px 5px 10px rgba(78, 78, 78, 0.8));
+}
+
+.form-container {
+    left: 800px;
+
+    margin: 50px auto;
+    width: 300px;
+    text-align: center;
+}
+
+.form-heading{
+    color: white;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 40px;
+
+    letter-spacing: 0.12em;
+}
+
+.form-container input {
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 0px;
+    box-sizing: border-box;
+    background: rgb(217, 217, 217);
+    border-radius: 10px;
+    border: #121212;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.form-container button{
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: #ffffff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+::placeholder{
+    color: #000000;
+    text-align: center;
+}
+
+.op{
+    position: absolute;
+    width: 500px;
+    height: 20px;
+    bottom: 70px;
+    left: 800px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 98px;
+
+    letter-spacing: 0.12em;
+
+    color: #FFFFFF;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+  }
+  
