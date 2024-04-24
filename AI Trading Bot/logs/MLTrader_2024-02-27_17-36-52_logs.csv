@@ -1,0 +1,39 @@
+2024-02-27 17:36:52,690: root: INFO: MLTrader : Executing the initialize lifecycle method
+2024-02-27 17:36:54,517: root: INFO: Current backtesting datetime 2023-12-15 08:30:00-05:00
+2024-02-27 17:36:54,518: root: INFO: MLTrader : Executing the before_market_opens lifecycle method
+2024-02-27 17:36:54,519: root: INFO: Current backtesting datetime 2023-12-15 09:30:00-05:00
+2024-02-27 17:36:54,520: root: INFO: MLTrader : Executing the before_starting_trading lifecycle method
+2024-02-27 17:36:54,521: root: INFO: [34mMLTrader : Executing the on_trading_iteration lifecycle method at 2024-02-27 17:36:54[0m
+2024-02-27 17:36:54,521: root: ERROR: 'MLTrader' object has no attribute 'las_trade'
+2024-02-27 17:36:54,567: root: ERROR: Traceback (most recent call last):
+  File "G:\GitHub\AI Trading Bot\.venv\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 829, in run
+    self._run_trading_session()
+  File "G:\GitHub\AI Trading Bot\.venv\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 780, in _run_trading_session
+    self._on_trading_iteration()
+  File "G:\GitHub\AI Trading Bot\.venv\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 274, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\GitHub\AI Trading Bot\.venv\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 298, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\GitHub\AI Trading Bot\.venv\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 87, in func_output
+    return func_input(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\GitHub\AI Trading Bot\.venv\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 378, in _on_trading_iteration
+    on_trading_iteration()
+  File "G:\GitHub\AI Trading Bot\.venv\Lib\site-packages\lumibot\tools\decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\GitHub\AI Trading Bot\.venv\Lib\site-packages\lumibot\tools\decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\GitHub\AI Trading Bot\trading_bot.py", line 26, in on_trading_iteration
+    if self.las_trade == None:
+       ^^^^^^^^^^^^^^
+AttributeError: 'MLTrader' object has no attribute 'las_trade'
+
+2024-02-27 17:36:54,571: root: INFO: MLTrader : Executing the on_bot_crash event method
+2024-02-27 17:36:54,640: root: INFO: Backtesting finished
+2024-02-27 17:36:54,653: root: WARNING: Cannot plot returns because the strategy returns are missing
+2024-02-27 17:36:55,734: root: WARNING: Cannot create a tearsheet because the strategy returns are missing
+2024-02-27 17:36:55,735: backtest_stats: INFO: Backtest took 0:00:03.048438 for a speed of 0.000
